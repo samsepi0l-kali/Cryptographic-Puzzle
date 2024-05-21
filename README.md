@@ -1,5 +1,5 @@
 # Puzzle
-Solve this Cryptographic Puzzles.
+Solve this Cryptographic Puzzle.
 
 Puzzle Instructions:
 
