@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle ARG</title>
+    <link rel="icon" type="image/png" href="dn.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Reduce the size of the image */
+        .centered-image-container img {
+            max-width: 50%; /* Adjust the maximum width as needed */
+            max-height: 50vh; /* Adjust the maximum height as needed */
+            margin-bottom: 20px;
+        }
+
+        .centered-content-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-content-container">
+        <header>
+            <img class="logo" src="Logo.ico" alt="Your Logo">
+        </header>
+        <div class="centered-image-container">
+            <img src="TheStars.png" alt="Stars">
+        </div>
+        <form id="inputForm">
+            <input type="text" id="textInput" placeholder="{Enter Flag Here}">
+            <p style="margin-top: 5px;">Submit the FINAL FLAG HERE!!</p>
+            <input type="submit" value="Submit">
+        </form>
+        <a href="TheStars.png" download>
+            <button>Download Image</button>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById("inputForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            var inputText = document.getElementById("textInput").value.trim();
+            if (inputText === "{BOOTORDER}") {
+                // Redirect to the same page (page2.html)
+                window.location.href = "page3.html"; 
+            } else {
+                alert("You thought it's going to be easy? ;) "); // Show an alert for wrong input
+                document.getElementById("textInput").focus(); // Focus back on the input field
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+img.logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.centered-content-container {
+    position: relative;
+    text-align: center; /* Center align all text contents */
+}
+
+.centered-image-container {
+    position: relative;
+}
+
+.centered-image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 60vh;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}

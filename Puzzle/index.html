@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle ARG</title>
+    <link rel="icon" type="image/png" href="dn.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="Logo.ico" alt="Your Logo">
+    </header>
+    <div class="centered-content-container">
+        <div class="centered-image-container">
+            <img src="Truncated.png" alt="Truncated">
+        </div>
+        <form id="inputForm">
+            <input type="text" id="textInput" placeholder="{Enter Flag Here}">
+            <p style="margin-top: 5px;">Submit the flag in the format {Flag}</p>
+            <input type="submit" value="Submit">
+        </form>
+        <a href="Truncated.png" download>
+            <button>Download Image</button>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById("inputForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            var inputText = document.getElementById("textInput").value.trim();
+            if (inputText === "{THESTARS}") {
+                window.location.href = "page2.html"; // Redirect to page2.html
+            } else {
+                alert("You thought it's going to be easy? ;) "); // Show an alert for wrong input
+                document.getElementById("textInput").focus(); // Focus back on the input field
+            }
+        });
+    </script>
+</body>
+</html>
